@@ -30,6 +30,26 @@ let g:which_key_map.b.D = 'force Delete'
 nnoremap <Leader>bD :bd!<CR>
 let g:which_key_map.b.c = 'Clear highlighting'
 nnoremap <Leader>bc :noh<CR>
+let g:which_key_map.b['1'] = 'which_key_ignore'
+let g:which_key_map.b['2'] = 'which_key_ignore'
+let g:which_key_map.b['3'] = 'which_key_ignore'
+let g:which_key_map.b['4'] = 'which_key_ignore'
+let g:which_key_map.b['5'] = 'which_key_ignore'
+let g:which_key_map.b['6'] = 'which_key_ignore'
+let g:which_key_map.b['7'] = 'which_key_ignore'
+let g:which_key_map.b['8'] = 'which_key_ignore'
+let g:which_key_map.b['9'] = 'which_key_ignore'
+let g:which_key_map.b['0'] = 'which_key_ignore'
+nmap <Leader>b1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>b2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>b3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>b4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>b5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>b6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>b7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>b8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>b9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>b0 <Plug>lightline#bufferline#go(10)
 
 " Selection
 let g:which_key_map.s = {'name': '+Selection'}

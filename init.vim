@@ -17,6 +17,7 @@ Plug 'junegunn/goyo.vim'
 
 " Status line
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Keybind menu.
 Plug 'liuchengxu/vim-which-key'
@@ -44,6 +45,9 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 set timeoutlen=500
 
