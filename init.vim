@@ -84,7 +84,7 @@ set shiftwidth=4
 set scrolloff=5
 
 " Allow clicking.
-set mouse
+set mouse=a
 
 " Set our color scheme.
 colorscheme nord
