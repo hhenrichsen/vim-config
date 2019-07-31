@@ -5,10 +5,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 
 " Tim Pope's Utilities.
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'   " Change quotes/parens/etc.
+Plug 'tpope/vim-commentary' " Comment and uncomment lines.
+Plug 'tpope/vim-repeat'     " Repeat the above.
+Plug 'tpope/vim-abolish'    " Enhanced search and replace.
+
+" Time Tracking.
+Plug 'wakatime/vim-wakatime'
 
 " Completion.
 Plug 'neoclide/coc.nvim'
@@ -27,8 +30,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'Konfekt/vim-CtrlXA'
 
 " Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'     " Tim Pope's Git wrapper
+Plug 'airblade/vim-gitgutter' " Shows the signs in the gutter.
 
 call plug#end()
 
