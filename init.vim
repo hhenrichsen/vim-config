@@ -18,6 +18,7 @@ Plug 'neoclide/coc.nvim'
 
 " Distraction-free writing.
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Status line
 Plug 'itchyny/lightline.vim'
@@ -43,7 +44,7 @@ set showtabline=2
 let g:lightline#bufferline#show_number  = 2
 let g:lightline#bufferline#unnamed      = '[No Name]'
 let g:lightline#bufferline#filename_modifier = ':t'
-let g:lightline#bufferline#modified = ' '
+let g:lightline#bufferline#modified = '  '
 let g:lightline#bufferline#read_only = ' '
 let g:lightline#bufferline#number_map = {
       \ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
@@ -83,6 +84,8 @@ endfunction
 set timeoutlen=500
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+let g:goyo_width = 81
 "
 " Vim configuration.
 "

@@ -64,6 +64,8 @@ let g:which_key_map.v.s = 'Source vimrc'
 nnoremap <Leader>vs :so $MYVIMRC<CR>
 let g:which_key_map.v['S'] = 'source Current file'
 nnoremap <Leader>vS :so %<CR>
+let g:which_key_map.v.d = 'Distraction free mode'
+nnoremap <Leader>vd :Limelight!!<CR>:Goyo<CR>
 let g:which_key_map.v.p = {'name': '+Plugins'}
 let g:which_key_map.v.p.i = 'Install plugins'
 nnoremap <Leader>vpi :PlugInstall<CR>
@@ -131,7 +133,7 @@ nnoremap <Leader>dd zd
 let g:which_key_map.d['D'] = 'Delete Recursive'
 nnoremap <Leader>dD zD
 
-let g:which_key_map.h = {'name': '+Highlighting'}
+let g:which_key_map.h = {'name': '+Visual'}
 let g:which_key_map.h.c = 'Clear highlighting'
 nnoremap <Leader>hc :noh<CR>
 let g:which_key_map.h.s = 'toggle Spell check'
