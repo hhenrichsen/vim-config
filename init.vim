@@ -34,6 +34,12 @@ Plug 'Konfekt/vim-CtrlXA'
 Plug 'tpope/vim-fugitive'     " Tim Pope's Git wrapper
 Plug 'airblade/vim-gitgutter' " Shows the signs in the gutter.
 
+" Rust
+Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+
+" TOML
+Plug 'cespare/vim-toml', { 'for': ['toml'] }
+
 call plug#end()
 
 "
