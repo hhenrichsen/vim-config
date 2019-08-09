@@ -35,6 +35,9 @@ runtime rust.vim
 " Status lines.
 runtime statusline.vim
 
+" Testing utilities.
+runtime test.vim
+
 " Visual themes.
 runtime theme.vim
 
@@ -110,6 +113,11 @@ if(mod_statusline)
         endif
         return ''
     endfunction
+end
+
+if(mod_test)
+    let g:ale_lint_on_text_changed = 'never'
+    let g:ale_lint_on_enter = 0
 end
 "
 " Vim configuration.

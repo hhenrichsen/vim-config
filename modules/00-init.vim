@@ -6,6 +6,7 @@ let mod_keybind = 0
 let mod_make = 0
 let mod_rust = 0
 let mod_statusline = 0
+let mod_test = 0
 let mod_theme = 0
 let mod_time = 0
 let mod_ui = 0
