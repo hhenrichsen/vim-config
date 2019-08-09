@@ -17,8 +17,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'neoclide/coc.nvim'
 
 " Distraction-free writing.
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
 
 " Status line
 Plug 'itchyny/lightline.vim'
