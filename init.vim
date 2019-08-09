@@ -8,6 +8,9 @@ end
 " Initialize plug.
 call plug#begin('~/.vim/plugged')
 
+" Initializes some variables.
+runtime 00-init.vim
+
 " Completion.
 runtime completion.vim
 
