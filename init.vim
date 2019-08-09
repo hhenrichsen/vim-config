@@ -47,6 +47,9 @@ runtime ui.vim
 " Basic tweaks/changes.
 runtime util.vim
 
+" Writing utilities.
+runtime write.vim
+
 call plug#end()
 
 "

@@ -86,6 +86,10 @@ if(mod_keybind)
     let g:which_key_map.v = {'name': '+Visual'}
     let g:which_key_map.v.c = 'Clear highlighting'
     let g:which_key_map.v.s = 'toggle Spell check'
+    if(mod_write)
+        let g:which_key_map.v.p = 'check Passive grammar'
+        let g:which_key_map.v.g = 'check Grammar'
+    end
     if(mod_distraction)
         let g:which_key_map.v.d = 'toggle Distraction free mode'
         let g:which_key_map.v.l = 'toggle Limelight'
@@ -189,6 +193,10 @@ if(mod_distraction)
     nnoremap <Leader>vd :Limelight!!<CR>:Goyo<CR>
     nnoremap <Leader>vl :Limelight!!<CR>
     nnoremap <Leader>vg :Goyo<CR>
+end
+if(mod_write)
+    nnoremap <Leader>vp :set syntax=better-writing<CR>
+    nnoremap <Leader>vg :GrammarousCheck<CR>
 end
 
 if(mod_git)
