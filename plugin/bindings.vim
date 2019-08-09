@@ -71,6 +71,10 @@ if(mod_keybind)
         let g:which_key_map.c.g.r = 'References'
         let g:which_key_map.c.d = 'Documentation'
     end
+    if(mod_make)
+        let g:which_key_map.c.m = 'Make'
+        let g:which_key_map.c.M = 'Make'
+    end
     let g:which_key_map.c.w = 'Clean Whitespace'
     " Fold
     let g:which_key_map.d = {'name': '+foLd'}
@@ -166,6 +170,10 @@ if(mod_completion)
     nmap <silent> <Leader>cgi = <Plug>(coc-implementation)
     nmap <silent> <Leader>cgr = <Plug>(coc-references)
     nmap <silent> <Leader>cd :call <SID>show_documentation()<CR>
+end
+if(mod_make)
+    nmap <Leader>cm :Neomake<CR>
+    nmap <Leader>cM :Neomake!<CR>
 end
 nnoremap <Leader>cw :%s/\s\+$//<CR>
 

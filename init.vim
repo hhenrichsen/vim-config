@@ -26,6 +26,9 @@ runtime js.vim
 " Keybind explanations.
 runtime keybind.vim
 
+" Automake.
+runtime make.vim
+
 " Rust language utilities.
 runtime rust.vim
 
@@ -57,6 +60,10 @@ end
 
 if(mod_distraction)
     let g:goyo_width = 81
+end
+
+if(mod_make)
+    call neomake#configure#automake('w')
 end
 
 if(mod_statusline)
