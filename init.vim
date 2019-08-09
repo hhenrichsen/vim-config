@@ -1,97 +1,103 @@
+" Modular setup.
+if has('win32') || has('win64')
+    set rtp+=~/AppData/Local/nvim/modules
+else
+    set rtp+=~/.config/nvim/modules
+end
+
 " Initialize plug.
 call plug#begin('~/.vim/plugged')
 
-" Color schemes are the most important, and Nord is the best one.
-Plug 'arcticicestudio/nord-vim'
-
-" Tim Pope's Utilities.
-Plug 'tpope/vim-surround'   " Change quotes/parens/etc.
-Plug 'tpope/vim-commentary' " Comment and uncomment lines.
-Plug 'tpope/vim-repeat'     " Repeat the above.
-Plug 'tpope/vim-abolish'    " Enhanced search and replace.
-
-" Time Tracking.
-Plug 'wakatime/vim-wakatime'
-
 " Completion.
-Plug 'neoclide/coc.nvim'
+runtime completion.vim
 
-" Distraction-free writing.
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
+" Distraction-free mode.
+runtime distraction.vim
 
-" Status line
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+" Git helpers.
+runtime git.vim
 
-" Keybind menu.
-Plug 'liuchengxu/vim-which-key'
+" Javascript language utilities.
+runtime js.vim
 
-" Improve Ctrl-A.
-Plug 'Konfekt/vim-CtrlXA'
+" Visual themes.
+runtime theme.vim
 
-" Git
-Plug 'tpope/vim-fugitive'     " Tim Pope's Git wrapper
-Plug 'airblade/vim-gitgutter' " Shows the signs in the gutter.
+" UI changes/additions.
+runtime ui.vim
 
-" Rust
-Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+" Basic tweaks/changes.
+runtime util.vim
 
-" TOML
-Plug 'cespare/vim-toml', { 'for': ['toml'] }
+" Status lines.
+runtime statusline.vim
+
+" Rust language utilities.
+runtime rust.vim
+
+" Time-tracking.
+runtime time.vim
+
+" Keybind explanations.
+runtime keybind.vim
 
 call plug#end()
 
 "
 " Plugin configuration.
 "
+if(mod_statusline)
+    set showtabline=2
+    let g:lightline#bufferline#show_number  = 2
+    let g:lightline#bufferline#unnamed      = '[No Name]'
+    let g:lightline#bufferline#filename_modifier = ':t'
+    let g:lightline#bufferline#modified = '  '
+    let g:lightline#bufferline#read_only = ' '
+    let g:lightline#bufferline#number_map = {
+                \ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
+                \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 
-set showtabline=2
-let g:lightline#bufferline#show_number  = 2
-let g:lightline#bufferline#unnamed      = '[No Name]'
-let g:lightline#bufferline#filename_modifier = ':t'
-let g:lightline#bufferline#modified = '  '
-let g:lightline#bufferline#read_only = ' '
-let g:lightline#bufferline#number_map = {
-      \ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
-      \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
+    let g:lightline = {
+                \ 'colorscheme': 'nord',
+                \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+                \ 'active': {
+                \   'left': [ [ 'mode', 'paste' ],
+                \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+                \ },
+                \ 'component': {
+                \   'lineinfo': ' %3l:%-2v',
+                \ },
+                \ 'component_function': {
+                \   'readonly': 'LightlineReadonly',
+                \   'fugitive': 'LightlineFugitive'
+                \ },
+                \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
+                \ 'component_type': {'buffers': 'tabsel'},
+                \ 'separator': { 'left': '', 'right': '' },
+                \ 'subseparator': { 'left': '', 'right': '' }
+                \ }
 
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'lineinfo': ' %3l:%-2v',
-      \ },
-      \ 'component_function': {
-      \   'readonly': 'LightlineReadonly',
-      \   'fugitive': 'LightlineFugitive'
-      \ },
-      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
-      \ 'component_type': {'buffers': 'tabsel'},
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+    function! LightlineReadonly()
+        return &readonly ? '⭤' : ''
+    endfunction
+    function! LightlineFugitive()
+        if exists('*fugitive#head')
+            let branch = fugitive#head()
+            return branch !=# '' ? '⭠ '.branch : ''
+        endif
+        return ''
+    endfunction
+end
 
-function! LightlineReadonly()
-    return &readonly ? '⭤' : ''
-endfunction
-function! LightlineFugitive()
-    if exists('*fugitive#head')
-        let branch = fugitive#head()
-        return branch !=# '' ? '⭠ '.branch : ''
-    endif
-    return ''
-endfunction
+if(mod_completion)
+    set timeoutlen=500
 
-set timeoutlen=500
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+end
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-let g:goyo_width = 81
+if(mod_distraction)
+    let g:goyo_width = 81
+end
 "
 " Vim configuration.
 "
@@ -132,8 +138,3 @@ colorscheme nord
 " Set the spell check language, but hide spell checking by default.
 set spelllang=en_us
 set nospell
-
-"
-" General bindings.
-" Moved to plugin/bindings.vim
-"
