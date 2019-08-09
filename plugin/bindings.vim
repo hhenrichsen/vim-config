@@ -22,7 +22,7 @@ if(mod_keybind)
     let g:which_key_map.b.n = 'Next'
     let g:which_key_map.b.D = 'force Delete'
     let g:which_key_map.b.c = 'Clear highlighting'
-    let g:which_key_map.b.n = 'Previous'
+    let g:which_key_map.b.p = 'Previous'
     let g:which_key_map.b.d = 'Delete'
     let g:which_key_map.b['1'] = 'which_key_ignore'
     let g:which_key_map.b['2'] = 'which_key_ignore'
