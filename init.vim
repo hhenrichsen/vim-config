@@ -23,8 +23,20 @@ runtime git.vim
 " Javascript language utilities.
 runtime js.vim
 
+" Keybind explanations.
+runtime keybind.vim
+
+" Rust language utilities.
+runtime rust.vim
+
+" Status lines.
+runtime statusline.vim
+
 " Visual themes.
 runtime theme.vim
+
+" Time-tracking.
+runtime time.vim
 
 " UI changes/additions.
 runtime ui.vim
@@ -32,23 +44,21 @@ runtime ui.vim
 " Basic tweaks/changes.
 runtime util.vim
 
-" Status lines.
-runtime statusline.vim
-
-" Rust language utilities.
-runtime rust.vim
-
-" Time-tracking.
-runtime time.vim
-
-" Keybind explanations.
-runtime keybind.vim
-
 call plug#end()
 
 "
 " Plugin configuration.
 "
+if(mod_completion)
+    set timeoutlen=500
+
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+end
+
+if(mod_distraction)
+    let g:goyo_width = 81
+end
+
 if(mod_statusline)
     set showtabline=2
     let g:lightline#bufferline#show_number  = 2
@@ -90,16 +100,6 @@ if(mod_statusline)
         endif
         return ''
     endfunction
-end
-
-if(mod_completion)
-    set timeoutlen=500
-
-    autocmd CursorHold * silent call CocActionAsync('highlight')
-end
-
-if(mod_distraction)
-    let g:goyo_width = 81
 end
 "
 " Vim configuration.
