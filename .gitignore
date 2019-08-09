@@ -1,2 +1,4 @@
 # Ignore plugin loader.
 autoload/plug.vim
+
+.netrwhist
