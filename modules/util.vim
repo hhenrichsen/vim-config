@@ -8,3 +8,6 @@ Plug 'tpope/vim-abolish'    " Enhanced search and replace.
 
 " Improve Ctrl-A.
 Plug 'Konfekt/vim-CtrlXA'
+
+" Autoclose.
+Plug 'jiangmiao/auto-pairs'
