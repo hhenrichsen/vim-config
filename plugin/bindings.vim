@@ -170,6 +170,7 @@ if(mod_completion)
     nmap <silent> <Leader>cgi = <Plug>(coc-implementation)
     nmap <silent> <Leader>cgr = <Plug>(coc-references)
     nmap <silent> <Leader>cd :call <SID>show_documentation()<CR>
+    imap <C-j> <Plug>(coc-snippets-expand-jump)
 end
 if(mod_make)
     nmap <Leader>cm :Neomake<CR>
