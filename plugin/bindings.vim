@@ -17,6 +17,8 @@ let g:which_key_map.f.q = 'Quit'
 nnoremap <Leader>fq :q<CR>
 let g:which_key_map.f.Q = 'force Quit'
 nnoremap <Leader>fQ :q!<CR>
+let g:which_key_map.f.s = 'Save and Quit'
+nnoremap <Leader>fs :wq<CR>
 
 " Buffers
 let g:which_key_map.b = {'name': '+Buffer'}
@@ -51,26 +53,23 @@ nmap <Leader>b8 <Plug>lightline#bufferline#go(8)
 nmap <Leader>b9 <Plug>lightline#bufferline#go(9)
 nmap <Leader>b0 <Plug>lightline#bufferline#go(10)
 
-" Selection
-let g:which_key_map.s = {'name': '+Selection'}
-let g:which_key_map.s.a = 'Select All'
-nnoremap <Leader>sa ggVG
-
 " Vim
-let g:which_key_map.v = {'name': '+Vim'}
-let g:which_key_map.v.e = 'Edit vimrc'
-nnoremap <Leader>ve :e $MYVIMRC<CR>
-let g:which_key_map.v.s = 'Source vimrc'
-nnoremap <Leader>vs :so $MYVIMRC<CR>
-let g:which_key_map.v['S'] = 'source Current file'
-nnoremap <Leader>vS :so %<CR>
-let g:which_key_map.v.d = 'Distraction free mode'
-nnoremap <Leader>vd :Limelight!!<CR>:Goyo<CR>
-let g:which_key_map.v.p = {'name': '+Plugins'}
-let g:which_key_map.v.p.i = 'Install plugins'
-nnoremap <Leader>vpi :PlugInstall<CR>
-let g:which_key_map.v.p.c = 'Clean plugins'
-nnoremap <Leader>vpc :PlugClean<CR>
+let g:which_key_map.s = {'name': '+Settings'}
+let g:which_key_map.s.e = 'Edit vimrc'
+nnoremap <Leader>se :e $MYVIMRC<CR>
+let g:which_key_map.s.s = 'Source vimrc'
+nnoremap <Leader>ss :so $MYVIMRC<CR>
+let g:which_key_map.s['S'] = 'source Current file'
+nnoremap <Leader>sS :so %<CR>
+let g:which_key_map.s.p = {'name': '+Plugins'}
+let g:which_key_map.s.p.i = 'Install plugins'
+nnoremap <Leader>spi :PlugInstall<CR>
+let g:which_key_map.s.p.c = 'Clean plugins'
+nnoremap <Leader>spc :PlugClean<CR>
+
+" Selection
+let g:which_key_map.s.a = 'which_key_ignore'
+nnoremap <Leader>sa ggVG
 
 " Windows
 let g:which_key_map.w = {'name': '+Window'}
@@ -133,11 +132,17 @@ nnoremap <Leader>dd zd
 let g:which_key_map.d['D'] = 'Delete Recursive'
 nnoremap <Leader>dD zD
 
-let g:which_key_map.h = {'name': '+Visual'}
-let g:which_key_map.h.c = 'Clear highlighting'
-nnoremap <Leader>hc :noh<CR>
-let g:which_key_map.h.s = 'toggle Spell check'
-nnoremap <Leader>hs :setlocal spell!<CR>
+let g:which_key_map.v = {'name': '+Visual'}
+let g:which_key_map.v.c = 'Clear highlighting'
+nnoremap <Leader>vc :noh<CR>
+let g:which_key_map.v.s = 'toggle Spell check'
+nnoremap <Leader>vs :setlocal spell!<CR>
+let g:which_key_map.v.d = 'toggle Distraction free mode'
+nnoremap <Leader>vd :Limelight!!<CR>:Goyo<CR>
+let g:which_key_map.v.l = 'toggle Limelight'
+nnoremap <Leader>vl :Limelight!!<CR>
+let g:which_key_map.v.g = 'toggle Goyo'
+nnoremap <Leader>vg :Goyo<CR>
 
 let g:which_key_map.g = {'name': '+Git'}
 let g:which_key_map.g.s = 'Status'
