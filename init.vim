@@ -17,6 +17,9 @@ runtime completion.vim
 " Distraction-free mode.
 runtime distraction.vim
 
+" File finder.
+runtime files.vim
+
 " Git helpers.
 runtime git.vim
 
