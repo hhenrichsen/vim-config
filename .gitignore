@@ -1,4 +1,6 @@
 # Ignore plugin loader.
 autoload/plug.vim
 
+plugin/fzf.vim
+
 .netrwhist
