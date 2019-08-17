@@ -38,6 +38,9 @@ runtime rust.vim
 " Status lines.
 runtime statusline.vim
 
+" Ctags utilities.
+runtime tags.vim
+
 " Testing utilities.
 runtime test.vim
 
