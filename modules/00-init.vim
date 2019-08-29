@@ -4,6 +4,7 @@ let mod_files = 0
 let mod_git = 0
 let mod_js = 0
 let mod_keybind = 0
+let mod_latex = 0
 let mod_make = 0
 let mod_rust = 0
 let mod_statusline = 0

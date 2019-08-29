@@ -29,6 +29,9 @@ runtime js.vim
 " Keybind explanations.
 runtime keybind.vim
 
+" LaTeX integration.
+runtime latex.vim
+
 " Automake.
 runtime make.vim
 
@@ -72,6 +75,11 @@ end
 
 if(mod_distraction)
     let g:goyo_width = 81
+end
+
+if(mod_latex)
+    set conceallevel=2
+    let g:tex_conceal="abdgm"
 end
 
 if(mod_make)
