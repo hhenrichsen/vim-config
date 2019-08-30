@@ -1,6 +1,7 @@
 let mod_completion = 0
 let mod_distraction = 0
 let mod_files = 0
+let mod_ghost = 0
 let mod_git = 0
 let mod_js = 0
 let mod_keybind = 0

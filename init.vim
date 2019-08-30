@@ -20,6 +20,9 @@ runtime distraction.vim
 " File finder.
 runtime files.vim
 
+" Ghosttext support.
+runtime ghost.vim
+
 " Git helpers.
 runtime git.vim
 
