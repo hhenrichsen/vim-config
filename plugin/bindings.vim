@@ -102,6 +102,7 @@ if(mod_keybind)
         let g:which_key_map.g.c = 'Commit'
         let g:which_key_map.g.l = 'Log'
         let g:which_key_map.g.b = 'Blame'
+        let g:which_key_map.g.h = 'stage Hunk'
         let g:which_key_map.g.w = 'Write (add|checkout)'
         let g:which_key_map.g.r = 'Read (checkout --)'
         let g:which_key_map.g.u = 'Upload (push)'
@@ -204,6 +205,7 @@ if(mod_git)
     nnoremap <Leader>gc :Gcommit<CR>
     nnoremap <Leader>gl :Glog<CR>
     nnoremap <Leader>gb :Gblame<CR>
+    nnoremap <Leader>gh :GitGutterStageHunk<CR>
     nnoremap <Leader>gw :Gwrite<CR>
     nnoremap <Leader>gr :Gread<CR>
     nnoremap <Leader>gu :Gpush<CR>
