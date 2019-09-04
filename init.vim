@@ -80,6 +80,9 @@ if(mod_completion)
     set timeoutlen=500
 
     autocmd CursorHold * silent call CocActionAsync('highlight')
+
+    let g:echodoc#enable_at_startup = 1
+    let g:echodoc#type = "floating"
 end
 
 if(mod_distraction)
