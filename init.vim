@@ -67,6 +67,12 @@ runtime write.vim
 
 call plug#end()
 
+" Color Fix
+
+if $COLORTERM is "truecolor"
+    set termguicolors
+end
+
 "
 " Plugin configuration.
 "
