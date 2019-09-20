@@ -155,7 +155,6 @@ end
 "
 " Vim configuration.
 "
-
 set autochdir
 
 set hidden
