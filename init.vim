@@ -145,6 +145,13 @@ if(mod_test)
     let g:ale_lint_on_text_changed = 'never'
     let g:ale_lint_on_enter = 0
 end
+
+if(mod_util)
+    let g:pear_tree_smart_openers = 1
+    let g:pear_tree_smart_closers = 1
+    let g:pear_tree_smart_backspace = 1
+end
+
 "
 " Vim configuration.
 "

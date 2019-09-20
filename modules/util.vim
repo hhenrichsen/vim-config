@@ -10,4 +10,4 @@ Plug 'tpope/vim-abolish'    " Enhanced search and replace.
 Plug 'Konfekt/vim-CtrlXA'
 
 " Autoclose.
-Plug 'jiangmiao/auto-pairs'
+Plug 'tmsvg/pear-tree'
