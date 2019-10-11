@@ -65,6 +65,8 @@ runtime util.vim
 " Writing utilities.
 runtime write.vim
 
+Plug 'arzg/vim-substrata'
+
 call plug#end()
 
 " Color Fix
@@ -110,14 +112,16 @@ if(mod_statusline)
                 \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 
     let g:lightline = {
-                \ 'colorscheme': 'nord',
-                \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+                \ 'colorscheme': 'substrata',
+                \ 'tabline': {'left': [[ 'bufinfo', 'buffers' ]], 'right': [[ 'close' ]]},
                 \ 'active': {
                 \   'left': [ [ 'mode', 'paste' ],
-                \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+                \             [ 'charvalue', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
                 \ },
                 \ 'component': {
                 \   'lineinfo': ' %3l:%-2v',
+                \   'charvalue': ' %B',
+                \   'bufinfo': '﬘ %n'
                 \ },
                 \ 'component_function': {
                 \   'readonly': 'LightlineReadonly',
@@ -186,7 +190,8 @@ set scrolloff=5
 set mouse=a
 
 " Set our color scheme.
-colorscheme nord
+colorscheme substrata
+highlight Comment cterm=italic
 
 " Set the spell check language, but hide spell checking by default.
 set spelllang=en_us
