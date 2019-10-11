@@ -32,6 +32,9 @@ runtime js.vim
 " Keybind explanations.
 runtime keybind.vim
 
+" Kotlin language support.
+runtime kotlin.vim
+
 " LaTeX integration.
 runtime latex.vim
 
