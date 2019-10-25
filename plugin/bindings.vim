@@ -107,6 +107,8 @@ if(mod_keybind)
         let g:which_key_map.g.r = 'Read (checkout --)'
         let g:which_key_map.g.u = 'Upload (push)'
         let g:which_key_map.g.d = 'Download (pull)'
+        let g:which_key_map.g['['] = 'Next Hunk'
+        let g:which_key_map.g[']'] = 'Previous Hunk'
     end
 end
 
@@ -210,4 +212,6 @@ if(mod_git)
     nnoremap <Leader>gr :Gread<CR>
     nnoremap <Leader>gu :Gpush<CR>
     nnoremap <Leader>gd :Gpull<CR>
+    nnoremap <Leader>g] :GitGutterNextHunk<CR>
+    nnoremap <Leader>g[ :GitGutterPrevHunk<CR>
 end
