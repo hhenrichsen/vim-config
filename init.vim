@@ -26,23 +26,17 @@ runtime ghost.vim
 " Git helpers.
 runtime git.vim
 
-" Javascript language utilities.
-runtime js.vim
-
 " Keybind explanations.
 runtime keybind.vim
 
-" Kotlin language support.
-runtime kotlin.vim
+" Support for many languages.
+runtime language.vim
 
 " LaTeX integration.
 runtime latex.vim
 
 " Automake.
 runtime make.vim
-
-" Rust language utilities.
-runtime rust.vim
 
 " Status lines.
 runtime statusline.vim
