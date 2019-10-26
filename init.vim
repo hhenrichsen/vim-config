@@ -38,6 +38,9 @@ runtime latex.vim
 " Automake.
 runtime make.vim
 
+" Notes
+runtime note.vim
+
 " Status lines.
 runtime statusline.vim
 
@@ -95,6 +98,10 @@ end
 
 if(mod_make)
     call neomake#configure#automake('w')
+end
+
+if(mod_note)
+    let g:notes_suffix = '.md'
 end
 
 if(mod_statusline)
