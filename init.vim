@@ -26,6 +26,9 @@ runtime ghost.vim
 " Git helpers.
 runtime git.vim
 
+" HTML Utilities
+runtime html.vim
+
 " Keybind explanations.
 runtime keybind.vim
 

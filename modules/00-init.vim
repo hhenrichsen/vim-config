@@ -3,6 +3,7 @@ let mod_distraction = 0
 let mod_files = 0
 let mod_ghost = 0
 let mod_git = 0
+let mod_html = 0
 let mod_language = 0
 let mod_keybind = 0
 let mod_latex = 0

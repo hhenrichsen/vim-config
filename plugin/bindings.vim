@@ -1,6 +1,6 @@
 " Leader
 let g:mapleader="\<Space>"
-let g:maplocalleader = ','
+let g:maplocalleader = ';'
 if(mod_keybind)
     call which_key#register('<Space>', "g:which_key_map")
     nnoremap <Space> <Nop>
