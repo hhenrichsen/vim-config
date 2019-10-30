@@ -8,6 +8,7 @@ let mod_language = 0
 let mod_keybind = 0
 let mod_latex = 0
 let mod_make = 0
+let mod_note = 0
 let mod_statusline = 0
 let mod_tags = 0
 let mod_test = 0
