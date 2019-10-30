@@ -2,10 +2,7 @@
 
 ## Setup
 
-1. Get yourself a copy of nvim for your platform. For Windows, I recommend
-   installing with [Chocolately](https://chocolatey.org/) because I built this
-   config using some certain paths in mind.
-   For other platforms, see the instructions
+1. Get yourself a copy of nvim for your platform. See the instructions 
    [here](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 2. Install [vim-plug](https://github.com/junegunn/vim-plug). I don't
    redistribute that as a part of this repo.
