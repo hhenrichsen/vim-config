@@ -11,3 +11,6 @@ Plug 'Konfekt/vim-CtrlXA'
 
 " Autoclose.
 Plug 'tmsvg/pear-tree'
+
+" Sneaky motions.
+Plug 'justinmk/vim-sneak'
