@@ -22,3 +22,6 @@ Plug 'tommcdo/vim-lion'
 
 " Paste formatting
 Plug 'sickill/vim-pasta'
+
+" Make f,F,t,T work better.
+Plug 'rhysd/clever-f.vim'
