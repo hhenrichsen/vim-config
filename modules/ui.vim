@@ -9,3 +9,6 @@ Plug 'dbmrq/vim-redacted'
 
 " Indent guides.
 Plug 'Yggdroot/indentLine' 
+
+" Show preview of search/replace.
+Plug 'markonm/traces.vim'
