@@ -68,8 +68,6 @@ runtime util.vim
 " Writing utilities.
 runtime write.vim
 
-Plug 'arzg/vim-substrata'
-
 call plug#end()
 
 " Color Fix
