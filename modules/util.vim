@@ -14,5 +14,11 @@ Plug 'tmsvg/pear-tree'
 " Sneaky motions.
 Plug 'justinmk/vim-sneak'
 
+" Surround
 Plug 'machakann/vim-sandwich'
+
+" Align around symbols.
 Plug 'tommcdo/vim-lion'
+
+" Paste formatting
+Plug 'sickill/vim-pasta'
