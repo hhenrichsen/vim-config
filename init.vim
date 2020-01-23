@@ -117,7 +117,7 @@ if(mod_statusline)
                 \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 
     let g:lightline = {
-                \ 'colorscheme': 'substrata',
+                \ 'colorscheme': 'nord',
                 \ 'tabline': {'left': [[ 'bufinfo', 'buffers' ]], 'right': [[ 'close' ]]},
                 \ 'active': {
                 \   'left': [ [ 'mode', 'paste' ],
@@ -195,7 +195,7 @@ set scrolloff=5
 set mouse=a
 
 " Set our color scheme.
-colorscheme substrata
+colorscheme nord
 highlight Comment cterm=italic
 
 " Set the spell check language, but hide spell checking by default.
